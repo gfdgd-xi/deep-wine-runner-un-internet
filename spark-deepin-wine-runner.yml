@@ -5,10 +5,10 @@
 # wget -c "https://github.com/AppImage/pkg2appimage/raw/master/pkg2appimage"
 # bash -ex pkg2appimage Google_Chrome
 
-app: spark-deepin-wine-runner
+app: com.gitee.uengine.runner.spark
 
 ingredients:
-  package: spark-deepin-wine-runner
+  package: com.gitee.uengine.runner.spark
   dist: deepin
   sources:
     - deb https://com-store-packages.uniontech.com/appstore deepin appstore
