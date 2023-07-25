@@ -1,7 +1,6 @@
 name: Auto Building Wine Runner
 run-name: ${{ github.actor }} Auto Building Wine Runner 🚀
 on:
-  push:
   workflow_dispatch:
 jobs:
   Explore-GitHub-Actions:
@@ -16,6 +15,7 @@ jobs:
           # 配置环境
           #sudo apt update
           #sudo apt install git dpkg-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qt5-qmake -y
+          sudo apt install libfuse2 -y
           git clone https://github.com/gfdgd-xi/deep-wine-runner-un-internet
           cd deep-wine-runner-un-internet
           wget https://github.com/AppImageCommunity/pkg2appimage/releases/download/continuous/pkg2appimage-1807-x86_64.AppImage
