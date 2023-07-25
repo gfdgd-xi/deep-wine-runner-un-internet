@@ -1,0 +1,14 @@
+# TODO: Add https://www.i-dont-care-about-cookies.eu/ - https://github.com/uBlockOrigin/uBlock-issues/issues/196#issuecomment-417963577
+#
+# We are not allowed to redistribute AppImages of Google Chrome,
+# but you can easily make your own using this recipe like this on a Debian/Ubuntu system:
+# wget -c "https://github.com/AppImage/pkg2appimage/raw/master/pkg2appimage"
+# bash -ex pkg2appimage Google_Chrome
+
+app: spark-deepin-wine-runner
+
+ingredients:
+  package: spark-deepin-wine-runner
+  dist: deepin
+  sources:
+    - deb https://com-store-packages.uniontech.com/appstore deepin appstore

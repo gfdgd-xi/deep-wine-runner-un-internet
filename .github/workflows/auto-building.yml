@@ -1,0 +1,32 @@
+name: Auto Building Wine Runner
+run-name: ${{ github.actor }} Auto Building Wine Runner 🚀
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Building DEB
+        env: 
+          GUSER: ${{ secrets.GUSER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          UPLOADURL: ${{ secrets.UPLOADURL }}
+        run: |
+          # 配置环境
+          #sudo apt update
+          #sudo apt install git dpkg-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qt5-qmake -y
+          git clone https://github.com/gfdgd-xi/deep-wine-runner-un-internet
+          cd deep-wine-runner-un-internet
+          wget https://github.com/AppImageCommunity/pkg2appimage/releases/download/continuous/pkg2appimage-1807-x86_64.AppImage
+          chmod 777 pkg2appimage-1807-x86_64.AppImage
+          ./pkg2appimage-1807-x86_64.AppImage spark-deepin-wine-runner.yml
+          
+      #- name: upload result
+      #  uses: actions/upload-artifact@v1
+      #  with:
+      #    name: spark-deepin-wine-runner.deb
+      #    path: /home/runner/spark-deepin-wine-runner.deb
+      
+      
+    
